@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS Intern Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <body>
+    <div class="dashboard-card">
+        <div class="contact-container">
+            <button id="contact-btn" class="icon-btn" title="Contact Info">✉</button>
+            <div id="contact-info" class="contact-popup hidden">
+                <p><strong>Email:</strong> tilaonmichael@gmail.com</p>
+                <p><strong>Phone:</strong> 09054229764</p>
+            </div>
+        </div>
+
+        <nav class="tab-nav">
+            <button class="tab-btn active" onclick="openTab('profile')">Profile</button>
+            <button class="tab-btn" onclick="openTab('schedule')">Schedule</button>
+            <button class="tab-btn" onclick="openTab('works')">Works</button>
+        </nav>
+
+        <div id="profile" class="tab-content active">
+            <header class="profile-header">
+                <div class="profile-img-container">
+                    <img src="img/IMG_8809.jpeg" alt="CS Student Profile" class="profile-pic">
+                </div>
+                <h1>Tila-on, Michael Angelo N.</h1>
+                <p class="school-tag">Metro Business College</p>
+                <p class="role">Computer Science Student | Aspiring Developer</p>
+            </header>
+            
+            <section class="summary">
+                <h3>Student Objective</h3>
+                <p>Highly motivated Computer Science student from Metro Business College, 
+        focused on mastering full-stack development. I aim to apply my 
+        technical skills in real-world projects, delivering efficient 
+        and innovative digital solutions while continuously learning 
+        emerging technologies.</p>
+            </section>
+
+            <section class="skills">
+                <h3>Technical Skills</h3>
+                <ul>
+                    <li><strong>Languages:</strong> Java, Python, JavaScript</li>
+                    <li><strong>Web Dev:</strong> Responsive Design</li>
+                </ul>
+            </section>
+        </div>
+
+        <div id="schedule" class="tab-content">
+            <h3>OJT Schedule</h3>
+            <div class="metric-box">
+                <span class="label">Shift</span>
+                <span class="value">8:00 AM - 5:00 PM</span>
+            </div>
+            <ul style="margin-top: 15px;">
+                <li>Monday - Friday: None</li>
+                <li>Saturday: None</li>
+            </ul>
+        </div>
+
+        <div id="works" class="tab-content">
+            <h3>Projects & Works</h3>
+            <div class="work-item">
+                <strong>Pasay Feedback Portal</strong>
+                <p>A centralized platform for community feedback and incident reporting.</p>
+            </div>
+
+            <div class="work-item">
+                <strong>Kahaos Shop</strong>
+                <p>An e-commerce interface featuring product listings and cart functionality.</p>
+            </div>
+
+            <div class="work-item">
+                <strong>Student Management System</strong>
+                <p>A database-driven application for tracking student records and academic progress.</p>
+            </div>
+
+            <div class="work-item">
+                <strong>Metro Business College Portal</strong>
+                <p>A custom institutional portal designed for student resources and information.</p>
+            </div>
+
+            <div class="work-item">
+                <strong>Portfolio Website</strong>
+                <p>A responsive dashboard using HTML, CSS, and JS.</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

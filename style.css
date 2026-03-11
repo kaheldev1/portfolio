@@ -1,0 +1,231 @@
+:root {
+    --mbc-blue: #003366; /* Formal academic blue */
+    --tech-green: #10b981;
+    --dark-slate: #1e293b;
+    --bg-light: #f1f5f9;
+}
+
+body {
+    background-color: var(--bg-light);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.dashboard-card {
+    background: #ffffff;
+    max-width: 550px;
+    width: 100%;
+    border-top: 8px solid var(--mbc-blue);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.profile-header { text-align: center; margin-bottom: 25px; }
+
+.school-tag {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: var(--mbc-blue);
+    margin-bottom: 5px;
+}
+
+.profile-img-container {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 15px;
+    border-radius: 20%; /* Squircle look for tech profile */
+    overflow: hidden;
+    border: 3px solid var(--mbc-blue);
+}
+
+.profile-pic { width: 100%; height: 100%; object-fit: cover; }
+
+.role { 
+    color: var(--dark-slate); 
+    font-weight: 700; 
+    font-size: 0.9rem;
+    letter-spacing: 0.5px; 
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.metric-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.metric-box .label { font-size: 0.75rem; color: #64748b; font-family: 'Fira Code', monospace; }
+.metric-box .value { font-size: 1.2rem; font-weight: bold; color: var(--mbc-blue); }
+
+h3 { 
+    border-left: 4px solid var(--mbc-blue); 
+    padding-left: 10px; 
+    color: var(--dark-slate);
+    font-size: 1.1rem;
+}
+
+ul { font-size: 0.95rem; line-height: 1.8; color: #475569; }
+
+.btn-primary {
+    background: var(--mbc-blue);
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary:hover { background: #002244; transform: scale(1.02); }
+
+.hidden { 
+    display: none; 
+    text-align: center; 
+    margin-top: 15px; 
+    font-family: 'Fira Code', monospace;
+     font-size: 0.9rem; 
+    }
+/* Tab System Styling */
+.tab-nav {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 10px;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: #64748b;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.tab-btn:hover {
+    background: #f1f5f9;
+}
+
+.tab-btn.active {
+    color: var(--mbc-blue);
+    background: #e0e7ff;
+}
+
+/* Tab Visibility Control */
+.tab-content {
+    display: none;
+    animation: fadeIn 0.5s ease;
+    margin-bottom: 30px; /* Dagdag na space sa ilalim ng bawat tab */
+}
+
+.tab-content.active {
+    display: block; 
+}
+
+.actions {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee; /* Optional: manipis na linya para hiwalay ang button */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.work-item {
+    background: #f8fafc;
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-bottom: 12px; /* Hindi masyadong dikit sa susunod na project */
+    border-left: 4px solid var(--tech-green);
+}
+/* Compact Work Items */
+#works .work-item {
+    padding: 10px 15px; /* Reduced vertical padding */
+    margin-bottom: 8px; /* Tighter spacing between items */
+}
+
+#works .work-item strong {
+    font-size: 0.9rem; /* Slightly smaller title */
+    display: block;
+}
+
+#works .work-item p {
+    font-size: 0.8rem; /* Smaller description text */
+    margin: 2px 0 0; /* Tightened margin */
+    line-height: 1.4;
+}
+/* Positioning the Dashboard Card */
+.dashboard-card {
+    position: relative; /* Importante para sa absolute positioning ng button */
+    background: #ffffff;
+    max-width: 550px;
+    width: 100%;
+    border-top: 8px solid var(--mbc-blue);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Contact Button sa taas */
+/* Contact Button sa Labas ng Main Frame */
+/* Contact Button sa labas mismo ng card (Floating sa Web Frame) */
+.contact-container {
+    position: fixed; /* Humiwalay sa container, nakadepende na sa screen */
+    top: 40px;       /* Distansya mula sa itaas ng browser */
+    right: 40px;     /* Distansya mula sa kanang edge ng browser */
+    z-index: 9999;   /* Siguradong laging nasa ibabaw */
+}
+
+.icon-btn {
+    background: var(--mbc-blue);
+    color: white;
+    border: none;
+    width: 50px;     /* Ginawa nating mas malaki dahil floating na siya */
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* Mas malalim na shadow para sa depth */
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.icon-btn:hover {
+    background: var(--tech-green);
+    transform: scale(1.1);
+}
+
+/* I-adjust ang popup position para bumagay sa fixed button */
+.contact-popup {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    border: 1px solid #e2e8f0;
+    min-width: 250px;
+    text-align: left;
+}
